@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pertemuan4/API/api_service.dart';
-import 'package:pertemuan4/models/article_model.dart';
+import 'package:pertemuan4/models/meal_model.dart';
 
 void main() {
   runApp(ArtikelApp());
@@ -27,19 +27,19 @@ class ArtikelScreen extends StatefulWidget {
 }
 
 class _ArtikelScreenState extends State<ArtikelScreen> {
-  late Future<List<Article>> _articlesFuture;
+  late Future<List<Meal>> _articlesFuture;
 
   @override
   void initState() {
     super.initState();
-    _articlesFuture = ApiService().fetchArticles();
+    _articlesFuture = ApiService().fetchMeals();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Artikel Terupdate"), centerTitle: true),
-      body: FutureBuilder<List<Article>>(
+      body: FutureBuilder<List<Meal>>(
         future: _articlesFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -81,7 +81,7 @@ class _ArtikelScreenState extends State<ArtikelScreen> {
                             height: 100,
                             child: Center(child: Text("Gambar tidak tersedia")),
                           ),
-                        SizedBox(height: 8),
+                        SizedBox(height: 12),
                         Text(
                           article.judul,
                           style: TextStyle(
@@ -89,8 +89,6 @@ class _ArtikelScreenState extends State<ArtikelScreen> {
                             fontSize: 24,
                           ),
                         ),
-                        SizedBox(height: 8),
-                        Text(article.deskripsi ?? 'Deskripsi tidak tersedia'),
                       ],
                     ),
                   ),
