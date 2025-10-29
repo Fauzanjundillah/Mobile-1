@@ -15,7 +15,7 @@ Widget ini secara otomatis memperbarui tampilan sesuai dengan status proses:
 ### B. RefreshIndicator digunakan untuk membuat fitur pull-to-refresh, yaitu aksi menarik layar ke bawah untuk memuat ulang data.
 Ketika gesture tersebut dilakukan, fungsi onRefresh akan dipanggil, biasanya untuk memanggil ulang API agar data diperbarui.
 
-### C.ScrollController dan FloatingActionButton
+### C. ScrollController dan FloatingActionButton
     a. ScrollController digunakan untuk memantau posisi scroll pada daftar (ListView).
     b. Dengan logika kondisi tertentu (misalnya offset > 300 pixel), aplikasi dapat menampilkan tombol FloatingActionButton secara otomatis.
     c. Tombol ini, saat ditekan, akan memanggil fungsi animateTo(0) untuk menggulir layar kembali ke atas dengan animasi halus.
