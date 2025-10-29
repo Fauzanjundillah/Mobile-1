@@ -25,4 +25,8 @@ Ketika gesture tersebut dilakukan, fungsi onRefresh akan dipanggil, biasanya unt
 2. Pengguna dapat menarik layar ke bawah (pull-to-refresh) untuk memuat data terbaru.
 3. Ketika pengguna menggulir ke bawah, muncul tombol panah ke atas di pojok kanan bawah. Saat tombol ditekan, tampilan akan kembali ke bagian atas daftar artikel dengan animasi.
 
+#### Gambar 1
+![alt text](https://github.com/Fauzanjundillah/Mobile-1/blob/main/dart1.png?raw=true)
 
+#### Gambar 2
+![alt text](https://github.com/Fauzanjundillah/Mobile-1/blob/main/dart%202.png?raw=true)
